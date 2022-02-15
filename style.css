@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(80deg, #8dc6ff, #34495e);
+    color: rgb(3, 25, 44);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5em;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+
+form button {
+    color: blue;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #34495e;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.complete-btn {
+    background: rgb(34, 226, 16);
+}
+
+.trash-btn {
+    background: rgb(226, 16, 16);
+}
+
+.trash-btn,
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.todo-item {
+    padding: 0rem 2rem;
+}
+
+
+/* this will make sure that you dont have to click only on the trash font for an action to take place but rather on the element it is located in */
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) translateX(8rem) rotateY(32400deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
